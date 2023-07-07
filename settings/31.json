@@ -1,0 +1,9 @@
+{"model_name": "x101",
+    "yaml_path": "configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x_vcm.yaml",
+    "pkl_path": "output/model_0094999.pth",
+    "VTM" : {"QP" : 31, "threads": 80},
+    "pixel_num": 3751665408
+}
+
+
+    

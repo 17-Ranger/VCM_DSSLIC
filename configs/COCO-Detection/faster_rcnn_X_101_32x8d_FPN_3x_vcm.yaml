@@ -1,0 +1,22 @@
+_BASE_: "../Base-RCNN-FPN-VCM.yaml"
+MODEL:
+  MASK_ON: False
+#  WEIGHTS: "output/model_0x4_8c_0911.pth"
+  WEIGHTS: "output/model_1128_coco.pth"
+#  WEIGHTS: "/media/data/ccr/model_final_68b088.pkl"
+  PIXEL_STD: [57.375, 57.120, 58.395]
+  RESNETS:
+    STRIDE_IN_1X1: False  # this is a C2 model
+    NUM_GROUPS: 32
+    WIDTH_PER_GROUP: 8
+    DEPTH: 101
+SOLVER:
+  STEPS: (70000, 90000)
+  MAX_ITER: 100000
+INPUT:
+#  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+#  MIN_SIZE_TRAIN: (640, 640)
+#  MIN_SIZE_TRAIN: (832, 832)
+  MIN_SIZE_TRAIN: (416, 416)
+#  MIN_SIZE_TEST: 576
+  MIN_SIZE_TEST: 352
